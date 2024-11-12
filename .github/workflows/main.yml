@@ -12,7 +12,7 @@ jobs:
         run: python3 main.py
 
     
-  hola_mundo:
+  build_push:
     runs-on: ubuntu-latest
 
     steps:
