@@ -3,6 +3,15 @@ name: Primer workflow
 on: push
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Bajar codigo
+        uses: actions/checkout@v4
+      - name: Probar codigo
+        run: python3 main.py
+
+    
   hola_mundo:
     runs-on: ubuntu-latest
 
@@ -10,9 +19,6 @@ jobs:
         
       - name: Bajar codigo
         uses: actions/checkout@v4
-
-      - name: Probar codigo
-        run: python3 main.py
 
       -
         name: Login to Docker Hub
